@@ -1,4 +1,4 @@
-﻿namespace JwtAuthentication.Models.Domain
+﻿namespace JwtAuthentication.Models
 {
     public class Cars
     {
