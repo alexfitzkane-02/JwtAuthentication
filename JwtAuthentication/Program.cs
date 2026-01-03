@@ -1,4 +1,6 @@
 using JwtAuthentication.Data;
+using JwtAuthentication.Repositories.Implementation;
+using JwtAuthentication.Repositories.Interface;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -24,6 +26,10 @@ builder.Services.AddDbContext<AuthDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+//Add Repositories
+builder.Services.AddScoped<ITokenRepository, TokenRepository>();
+
 
 //Add Identity Services
 builder.Services.AddIdentityCore<IdentityUser>()

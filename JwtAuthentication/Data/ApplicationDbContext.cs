@@ -1,5 +1,4 @@
-﻿using JwtAuthentication.Models.Domain;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace JwtAuthentication.Data
 {
@@ -12,9 +11,5 @@ namespace JwtAuthentication.Data
 
             }
         }
-
-
-        public DbSet<Cars> Cars { get; set; }
-
     }
 }
